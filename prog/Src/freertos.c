@@ -26,7 +26,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */     
+#include "mb.h"
+#include "mbport.h"
 
+using namespace std;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,21 +49,26 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+extern SPI_HandleTypeDef hspi3;
+extern SPI_HandleTypeDef hspi1;
+extern settings_t settings;
+int start = 1;
 /* USER CODE END Variables */
-osThreadId defaultTaskHandle;
+osThreadId MainTaskHandle;
+osThreadId ModBus_TaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-   
+//   extern "C"
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
+void ModBusTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
-void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
+extern "C" void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
 
 /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
 static StaticTask_t xIdleTaskTCBBuffer;
@@ -102,9 +110,13 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  /* definition and creation of MainTask */
+  osThreadDef(MainTask, StartDefaultTask, osPriorityNormal, 0, 512);
+  MainTaskHandle = osThreadCreate(osThread(MainTask), NULL);
+
+  /* definition and creation of ModBus_Task */
+  osThreadDef(ModBus_Task, ModBusTask, osPriorityNormal, 0, 512);
+  ModBus_TaskHandle = osThreadCreate(osThread(ModBus_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -122,17 +134,90 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+  uint8_t TxBuff[4] = {0xff};
+  //uint8_t RxBuff[50] = {0};
+  uint16_t Size = 4;
+  HAL_StatusTypeDef StatusSPI1;
+  HAL_GPIO_WritePin(MR_GPIO_Port, MR_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(OE_GPIO_Port, OE_Pin, GPIO_PIN_RESET);
+  
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    if(start){
+      start = 0;
+      
+      StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
+      StatusSPI1 = StatusSPI1;
+      HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+      osDelay(1);
+      HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+    }
   }
   /* USER CODE END StartDefaultTask */
 }
 
+/* USER CODE BEGIN Header_ModBusTask */
+/**
+* @brief Function implementing the ModBus_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ModBusTask */
+void ModBusTask(void const * argument)
+{
+  /* USER CODE BEGIN ModBusTask */
+   /* Infinite loop */
+   eMBErrorCode eStatus = eMBInit( MB_RTU, settings.SlaveAddress, 3, settings.BaudRate, MB_PAR_NONE );
+   eStatus = eMBEnable();
+   //HAL_TIM_Base_Start_IT(&htim17);
+   for(;;)
+   {
+      eMBPoll();
+      //taskYIELD();
+   }
+  /* USER CODE END ModBusTask */
+}
+
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-     
+/*description https://www.freemodbus.org/api/group__modbus__registers.html*/
+//0x04
+eMBErrorCode
+eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
+{
+   eMBErrorCode    eStatus = MB_ENOERR;
+   
+   return eStatus;
+}
+//0x03 0x06 0x10
+eMBErrorCode
+eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode )
+{
+   //uint8_t CMD[5] = {0};
+   volatile HAL_StatusTypeDef status;
+   
+   if(usAddress == 0 ){}
+   else{usAddress--;} 
+   
+   eMBErrorCode    eStatus = MB_ENOERR;
+   
+
+   return eStatus;
+}
+
+// 0x01 0x0f 0x05
+eMBErrorCode
+eMBRegCoilsCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNCoils, eMBRegisterMode eMode )
+{
+   return MB_ENOREG;
+}
+//0x02
+eMBErrorCode
+eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNDiscrete )
+{
+   return MB_ENOREG;
+}       
 /* USER CODE END Application */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

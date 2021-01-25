@@ -21015,6 +21015,78 @@ NoConn ~ 22200 27500
 NoConn ~ 23800 29900
 NoConn ~ 23800 30000
 NoConn ~ 23800 30100
+$Comp
+L Connector:TestPoint TP8
+U 1 1 66DB9EE4
+P 33075 27875
+F 0 "TP8" H 33133 28038 50  0000 L CNN
+F 1 "TestPoint" H 33133 27947 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 27856 50  0000 L CNN
+F 3 "~" H 33275 27875 50  0001 C CNN
+	1    33075 27875
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 27875
+$Comp
+L Connector:TestPoint TP16
+U 1 1 67C5012B
+P 33075 28100
+F 0 "TP16" H 33133 28263 50  0000 L CNN
+F 1 "TestPoint" H 33133 28172 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 28081 50  0000 L CNN
+F 3 "~" H 33275 28100 50  0001 C CNN
+	1    33075 28100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 28100
+$Comp
+L Connector:TestPoint TP17
+U 1 1 68ADA86E
+P 33075 28350
+F 0 "TP17" H 33133 28513 50  0000 L CNN
+F 1 "TestPoint" H 33133 28422 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 28331 50  0000 L CNN
+F 3 "~" H 33275 28350 50  0001 C CNN
+	1    33075 28350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 28350
+$Comp
+L Connector:TestPoint TP18
+U 1 1 69964F33
+P 33075 28625
+F 0 "TP18" H 33133 28788 50  0000 L CNN
+F 1 "TestPoint" H 33133 28697 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 28606 50  0000 L CNN
+F 3 "~" H 33275 28625 50  0001 C CNN
+	1    33075 28625
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 28625
+$Comp
+L Connector:TestPoint TP19
+U 1 1 6A7EF4EC
+P 33075 28875
+F 0 "TP19" H 33133 29038 50  0000 L CNN
+F 1 "TestPoint" H 33133 28947 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 28856 50  0000 L CNN
+F 3 "~" H 33275 28875 50  0001 C CNN
+	1    33075 28875
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 28875
+$Comp
+L Connector:TestPoint TP20
+U 1 1 6B679B93
+P 33075 29150
+F 0 "TP20" H 33133 29313 50  0000 L CNN
+F 1 "TestPoint" H 33133 29222 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D4.0mm" H 33133 29131 50  0000 L CNN
+F 3 "~" H 33275 29150 50  0001 C CNN
+	1    33075 29150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 33075 29150
 Wire Wire Line
 	23800 26300 24600 26300
 Wire Wire Line

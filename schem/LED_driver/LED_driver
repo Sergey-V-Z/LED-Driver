@@ -1,0 +1,911 @@
+Source:	D:\Radio\Jobe\LED Driver\schem\LED_driver\LED_driver.sch
+Date:	15.09.2020 10:07:51
+Tool:	Eeschema (5.1.0)-1
+Component Count:	906
+Ref	Value	Part	Footprint	Description	Vendor
+C1	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C2	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C3	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C4	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C5	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C6	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C7	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C8	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C9	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C10	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C11	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C12	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C13	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C14	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C15	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C16	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C17	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C18	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C19	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C20	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C21	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C22	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C23	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C24	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C25	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C26	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C27	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C28	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C29	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C30	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C31	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C32	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C33	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C34	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C35	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C36	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C37	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C38	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C39	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C40	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C41	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C42	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C43	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C44	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C45	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C46	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C47	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C48	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C49	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C50	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C51	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C52	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C53	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C54	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C55	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C56	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C57	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C58	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C59	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C60	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C61	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C62	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C63	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C64	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C65	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C66	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C67	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C68	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C69	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C70	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C71	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C72	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C73	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C74	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C75	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C76	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C77	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C78	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C79	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C80	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C81	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C82	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C83	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C84	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C85	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C86	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C87	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C88	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C89	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C90	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C91	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C92	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C93	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C94	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C95	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C96	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C97	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C98	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C99	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C100	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C101	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C102	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C103	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C104	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C105	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C106	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C107	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C108	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C109	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C110	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C111	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C112	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C113	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C114	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C115	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C116	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C117	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C118	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C119	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C120	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C121	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C122	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C123	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C124	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C125	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C126	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C127	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C128	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C129	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C130	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C131	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C132	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C133	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C134	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C135	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C136	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C137	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C138	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C139	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C140	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C141	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C142	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C143	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C144	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C145	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C146	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C147	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C148	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C149	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C150	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C151	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C152	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C153	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C154	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C155	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C156	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C157	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C158	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C159	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C160	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C161	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C162	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C163	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C164	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C165	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C166	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C167	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C168	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C169	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C170	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C171	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C172	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C173	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C174	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C175	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C176	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C177	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C178	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C179	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C180	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C181	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C182	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C183	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C184	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C185	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C186	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C187	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C188	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C189	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C190	470mkF	Device:CP	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C191	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C192	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C193	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C194	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C195	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C196	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C197	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C198	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C199	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C200	1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C201	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C202	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C203	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C204	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C205	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C206	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C207	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C208	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C209	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C210	18pF	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C211	18pF	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C212	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C213	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C214	100uf 16v	Device:CP_Small	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C215	0.1uf	Device:C	Capacitor_SMD:C_0603_1608Metric	Unpolarized capacitor	
+C216	10uf 10v	Device:C	Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B	Unpolarized capacitor	
+C217	0.1 mkf	Device:C	Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder	Unpolarized capacitor	
+C218	0.1 mkf	Device:C	Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder	Unpolarized capacitor	
+C219	220uf 50v	Device:CP_Small	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C220	0.1mkF	Device:C	Capacitor_SMD:C_0805_2012Metric	Unpolarized capacitor	
+C221	470uf 50v	Device:CP_Small	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	Polarised capacitor	
+C222	10 mkf	Device:C	Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Unpolarized capacitor	
+C223	0.1 mkf	Device:C	Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder	Unpolarized capacitor	
+D1	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D2	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D3	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D4	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D5	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D6	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D7	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D8	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D9	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D10	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D11	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D12	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D13	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D14	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D15	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D16	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D17	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D18	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D19	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D20	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D21	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D22	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D23	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D24	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D25	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D26	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D27	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D28	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D29	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D30	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D31	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D32	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D33	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D34	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D35	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D36	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D37	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D38	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D39	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D40	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D41	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D42	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D43	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D44	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D45	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D46	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D47	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D48	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D49	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D50	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D51	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D52	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D53	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D54	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D55	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D56	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D57	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D58	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D59	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D60	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D61	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D62	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D63	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D64	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D65	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D66	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D67	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D68	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D69	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D70	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D71	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D72	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D73	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D74	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D75	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D76	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D77	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D78	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D79	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D80	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D81	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D82	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D83	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D84	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D85	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D86	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D87	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D88	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D89	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D90	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D91	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D92	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D93	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D94	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D95	Si2300	Transistor_FET:Si2300	Package_TO_SOT_SMD:SOT-23	20V Vds, N-Channel Power MOSFET, SOT-23	
+D96	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D97	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D98	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D99	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D100	lmc7101	Amplifier_Operational:lmc7101	Package_TO_SOT_SMD:SOT-23-5		
+D101	AM1DS-0505S-NZ	Converter_DCDC:AM1DS-xxxxS-NZ	Converter_DCDC:Converter_DCDC_muRata_NMAxxxxSC_THT		
+D102	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+D103	Led_RGB_CA_2	Device:Led_RGB_CA_2	LED_SMD:LED_Avago_PLCC4_3.2x2.8mm_CW	Common Anode RGB LED	
+D104	SM712	Device:SM712	Package_TO_SOT_SMD:SOT-23	Protection of RS-485 transceivers with extended	
+D105	B380R	Diode_Bridge:B380R	Diode_SMD:Diode_Bridge_Vishay_DFS	Single-Phase Bridge Rectifier, 380V Vrms, 1.6A If, WOG-like package	
+D106	LED	Device:LED	LED_SMD:LED_0805_2012Metric		
+D107	D_Schottky	Device:D_Schottky	Diode_SMD:D_SMC	Diode schottky	
+J1	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J2	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J3	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J4	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J5	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J6	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J7	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J8	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J9	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J10	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J11	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J12	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J13	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J14	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J15	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J16	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J17	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J18	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J19	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J20	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J21	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J22	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J23	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J24	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J25	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J26	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J27	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J28	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J29	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J30	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J31	SWD	Connector:Conn_01x05_Male	Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical	Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J32	RJ45_Shielded	Connector:RJ45_Shielded	Connector_RJ:RJ45_Ninigi_GE	RJ connector, 8P8C (8 positions 8 connected), Shielded	
+J33	RJ45_Shielded	Connector:RJ45_Shielded	Connector_RJ:RJ45_Ninigi_GE	RJ connector, 8P8C (8 positions 8 connected), Shielded	
+J34	DEBUG	Connector:Conn_01x04_Male	Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical	Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)	
+J35	Screw_Terminal_01x02	Connector:Screw_Terminal_01x02	TerminalBlock:TerminalBlock_bornier-2_P5.08mm	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	
+JP1	TX_UA	Jumper:SolderJumper_2_Bridged	Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm	Solder Jumper, 2-pole, closed/bridged	
+JP2	RX_UA	Jumper:SolderJumper_2_Bridged	Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm	Solder Jumper, 2-pole, closed/bridged	
+JP3	TX_CAN	Jumper:SolderJumper_2_Open	Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm	Solder Jumper, 2-pole, open	
+JP4	RX_CAN	Jumper:SolderJumper_2_Open	Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm	Solder Jumper, 2-pole, open	
+L1	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L2	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L3	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L4	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L5	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L6	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L7	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L8	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L9	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L10	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L11	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L12	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L13	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L14	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L15	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L16	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L17	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L18	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L19	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L20	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L21	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L22	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L23	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L24	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L25	22mkH	Device:L_Small	Inductor_SMD:L_10.4x10.4_H4.8	Inductor	
+L26	22 uH	Device:INDUCTOR_SMALL	Inductor_THT:L_Radial_D9.5mm_P5.00mm_Fastron_07HVP		
+L27	33 uH	Device:INDUCTOR_SMALL	Inductor_SMD:L_12x12mm_H8mm		
+R1	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R2	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R3	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R4	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R5	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R6	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R7	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R8	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R9	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R10	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R11	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R12	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R13	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R14	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R15	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R16	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R17	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R18	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R19	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R20	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R21	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R22	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R23	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R24	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R25	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R26	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R27	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R28	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R29	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R30	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R31	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R32	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R33	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R34	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R35	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R36	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R37	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R38	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R39	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R40	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R41	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R42	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R43	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R44	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R45	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R46	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R47	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R48	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R49	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R50	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R51	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R52	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R53	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R54	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R55	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R56	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R57	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R58	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R59	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R60	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R61	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R62	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R63	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R64	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R65	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R66	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R67	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R68	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R69	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R70	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R71	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R72	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R73	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R74	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R75	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R76	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R77	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R78	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R79	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R80	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R81	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R82	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R83	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R84	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R85	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R86	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R87	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R88	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R89	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R90	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R91	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R92	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R93	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R94	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R95	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R96	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R97	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R98	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R99	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R100	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R101	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R102	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R103	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R104	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R105	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R106	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R107	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R108	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R109	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R110	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R111	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R112	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R113	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R114	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R115	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R116	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R117	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R118	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R119	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R120	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R121	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R122	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R123	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R124	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R125	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R126	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R127	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R128	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R129	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R130	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R131	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R132	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R133	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R134	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R135	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R136	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R137	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R138	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R139	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R140	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R141	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R142	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R143	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R144	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R145	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R146	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R147	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R148	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R149	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R150	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R151	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R152	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R153	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R154	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R155	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R156	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R157	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R158	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R159	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R160	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R161	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R162	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R163	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R164	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R165	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R166	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R167	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R168	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R169	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R170	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R171	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R172	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R173	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R174	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R175	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R176	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R177	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R178	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R179	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R180	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R181	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R182	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R183	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R184	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R185	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R186	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R187	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R188	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R189	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R190	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R191	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R192	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R193	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R194	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R195	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R196	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R197	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R198	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R199	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R200	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R201	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R202	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R203	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R204	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R205	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R206	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R207	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R208	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R209	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R210	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R211	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R212	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R213	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R214	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R215	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R216	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R217	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R218	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R219	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R220	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R221	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R222	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R223	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R224	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R225	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R226	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R227	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R228	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R229	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R230	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R231	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R232	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R233	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R234	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R235	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R236	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R237	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R238	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R239	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R240	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R241	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R242	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R243	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R244	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R245	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R246	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R247	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R248	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R249	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R250	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R251	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R252	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R253	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R254	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R255	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R256	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R257	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R258	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R259	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R260	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R261	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R262	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R263	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R264	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R265	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R266	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R267	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R268	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R269	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R270	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R271	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R272	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R273	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R274	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R275	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R276	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R277	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R278	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R279	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R280	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R281	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R282	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R283	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R284	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R285	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R286	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R287	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R288	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R289	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R290	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R291	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R292	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R293	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R294	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R295	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R296	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R297	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R298	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R299	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R300	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R301	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R302	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R303	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R304	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R305	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R306	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R307	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R308	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R309	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R310	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R311	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R312	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R313	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R314	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R315	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R316	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R317	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R318	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R319	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R320	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R321	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R322	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R323	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R324	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R325	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R326	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R327	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R328	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R329	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R330	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R331	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R332	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R333	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R334	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R335	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R336	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R337	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R338	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R339	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R340	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R341	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R342	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R343	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R344	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R345	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R346	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R347	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R348	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R349	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R350	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R351	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R352	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R353	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R354	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R355	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R356	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R357	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R358	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R359	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R360	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R361	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R362	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R363	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R364	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R365	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R366	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R367	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R368	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R369	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R370	100K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R371	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R372	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R373	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R374	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R375	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R376	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R377	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R378	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R379	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R380	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R381	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R382	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R383	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R384	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R385	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R386	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R387	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R388	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R389	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R390	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R391	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R392	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R393	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R394	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R395	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R396	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R397	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R398	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R399	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R400	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R401	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R402	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R403	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R404	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R405	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R406	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R407	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R408	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R409	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R410	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R411	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R412	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R413	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R414	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R415	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R416	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R417	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R418	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R419	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R420	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R421	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R422	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R423	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R424	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R425	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R426	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R427	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R428	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R429	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R430	1R	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R431	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R432	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R433	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R434	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R435	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R436	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R437	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R438	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R439	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R440	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R441	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R442	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R443	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R444	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R445	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R446	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R447	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R448	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R449	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R450	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R451	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R452	510	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R453	10K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R454	15	Device:R	Resistor_SMD:R_1206_3216Metric	Resistor	
+R455	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R456	3K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R457	100	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R458	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R459	120 Om	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R460	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R461	10	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R462	3.3k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R463	10	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R464	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R465	1K	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R466	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R467	10k	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+R468	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R469	10k	Device:R	Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder	Resistor	
+R470	nc	Device:R	Resistor_SMD:R_0805_2012Metric	Resistor	
+RV1	10k	Device:POT	Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical	Potentionmetre	
+SW1	SW_DIP_x01	Switch:SW_DIP_x01	Button_Switch_THT:SW_DIP_SPSTx01_Slide_9.78x4.72mm_W7.62mm_P2.54mm	1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol	
+U1	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U2	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U3	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U4	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U5	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U6	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U7	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U8	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U9	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U10	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U11	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U12	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U13	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U14	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U15	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U16	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U17	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U18	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U19	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U20	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U21	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U22	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U23	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U24	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U25	LM3406	LED_driver-rescue:LM3406-Regulator_Switching	Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm		
+U26	74HC595	LED_driver-rescue:74HC595-74xx	Package_SO:SOP-16_4.55x10.3mm_P1.27mm		
+U27	74HC595	LED_driver-rescue:74HC595-74xx	Package_SO:SOP-16_4.55x10.3mm_P1.27mm		
+U28	TL431LP	Reference_Voltage:TL431LP	Package_TO_SOT_THT:TO-92_Inline	Shunt Regulator, TO-92	
+U29	STM32F303VCTx	MCU_ST_STM32F3:STM32F303VCTx	Package_QFP:LQFP-100_14x14mm_P0.5mm	ARM Cortex-M4 MCU, 256KB flash, 40KB RAM, 72MHz, 2-3.6V, 87 GPIO, LQFP-100	
+U30	MCP2551-I_SN	Interface:MCP2551-I_SN	Package_SO:SO-8_3.9x4.9mm_P1.27mm	High-Speed CAN Transceiver, SO8	
+U31	LM1117-3.3	Regulator_Linear:LM1117-3.3	Package_TO_SOT_THT:TO-220-3_Vertical	800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223	
+U32	74HC595	LED_driver-rescue:74HC595-74xx	Package_SO:SOP-16_4.55x10.3mm_P1.27mm		
+U33	GD25Q16C	LED_driver-rescue:GD25Q16C-Memory_Flash	Package_SO:PowerIntegrations_SO-8		
+U34	MAX3485	Interface_UART:MAX3485	Package_SO:SOIC-8_3.9x4.9mm_P1.27mm	True RS-485/RS-422, 10Mbps, Slew-Rate Limited, with low-power shutdown, with receiver/driver enable, 32 receiver drive capacitity, DIP-8 and SOIC-8	
+U35	ISO7341C	Isolator:ISO7341C	Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm	Low Power Quad-Channel 3/1 Digital Isolator, 25Mbps 31ns, Fail-Safe High, SO16	
+U36	LM2596S-ADJ	Regulator_Switching:LM2596S-ADJ	Package_TO_SOT_SMD:TO-263-5_TabPin3	Adjustable 3A Step-Down Voltage Regulator, TO-263	
+U37	74HC595	LED_driver-rescue:74HC595-74xx	Package_SO:SOP-16_4.55x10.3mm_P1.27mm		
+Y1	Crystal_Small	Device:Crystal_Small	Crystal:Crystal_SMD_HC49-SD	Two pin crystal	

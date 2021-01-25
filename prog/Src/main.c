@@ -22,13 +22,14 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "adc.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "flash_spi.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,7 +49,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+settings_t settings = {0}; //{115200, 0x0D, 0};
+bool resetSettings = false;
+flash *FlashP;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,8 +103,31 @@ int main(void)
   MX_TIM8_Init();
   MX_TIM6_Init();
   MX_USART1_UART_Init();
+  MX_ADC2_Init();
+  MX_SPI1_Init();
+  MX_SPI3_Init();
+  MX_TIM15_Init();
+  MX_TIM16_Init();
+  MX_TIM17_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  flash Flash;
+//  pins_spi_t cs = {SPI3_CS_GPIO_Port, SPI3_CS_Pin};
+//  pins_spi_t wp = {SPI3_WP_GPIO_Port, SPI3_WP_Pin};
+//  pins_spi_t hold = {SPI3_HOLD_GPIO_Port, SPI3_HOLD_Pin};
+  
+  FlashP = &Flash;
+  FlashP->Init(&hspi3, 0, {SPI3_CS_GPIO_Port, SPI3_CS_Pin}, {SPI3_WP_GPIO_Port, SPI3_WP_Pin}, {SPI3_HOLD_GPIO_Port, SPI3_HOLD_Pin});
+  
+  FlashP->Read(&settings);
+  
+  if((settings.BaudRate == 0) | (settings.BaudRate == 0xFFFFFFFF) | resetSettings)
+    {
+      
+      settings.BaudRate = 115200;
+      settings.SlaveAddress = 0x0D;
+      FlashP->Write(settings);
+    } 
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -139,7 +165,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -157,10 +183,11 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_TIM1
-                              |RCC_PERIPHCLK_TIM8|RCC_PERIPHCLK_ADC12
-                              |RCC_PERIPHCLK_ADC34;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_USART2
+                              |RCC_PERIPHCLK_TIM1|RCC_PERIPHCLK_TIM8
+                              |RCC_PERIPHCLK_ADC12|RCC_PERIPHCLK_ADC34;
   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
   PeriphClkInit.Adc12ClockSelection = RCC_ADC12PLLCLK_DIV1;
   PeriphClkInit.Adc34ClockSelection = RCC_ADC34PLLCLK_DIV1;
   PeriphClkInit.Tim1ClockSelection = RCC_TIM1CLK_HCLK;
