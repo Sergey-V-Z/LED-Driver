@@ -97,44 +97,44 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
 /* USER CODE END GET_IDLE_TASK_MEMORY */
 
 /**
-* @brief  FreeRTOS initialization
-* @param  None
-* @retval None
-*/
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
 void MX_FREERTOS_Init(void) {
-   /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init */
    
-   /* USER CODE END Init */
-   
-   /* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE END Init */
+
+  /* USER CODE BEGIN RTOS_MUTEX */
    /* add mutexes, ... */
-   /* USER CODE END RTOS_MUTEX */
-   
-   /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
    /* add semaphores, ... */
-   /* USER CODE END RTOS_SEMAPHORES */
-   
-   /* USER CODE BEGIN RTOS_TIMERS */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
    /* start timers, add new ones, ... */
-   /* USER CODE END RTOS_TIMERS */
-   
-   /* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
    /* add queues, ... */
-   /* USER CODE END RTOS_QUEUES */
-   
-   /* Create the thread(s) */
-   /* definition and creation of MainTask */
-   osThreadDef(MainTask, StartDefaultTask, osPriorityNormal, 0, 512);
-   MainTaskHandle = osThreadCreate(osThread(MainTask), NULL);
-   
-   /* definition and creation of ModBus_Task */
-   osThreadDef(ModBus_Task, ModBusTask, osPriorityNormal, 0, 512);
-   ModBus_TaskHandle = osThreadCreate(osThread(ModBus_Task), NULL);
-   
-   /* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* definition and creation of MainTask */
+  osThreadDef(MainTask, StartDefaultTask, osPriorityNormal, 0, 512);
+  MainTaskHandle = osThreadCreate(osThread(MainTask), NULL);
+
+  /* definition and creation of ModBus_Task */
+  osThreadDef(ModBus_Task, ModBusTask, osPriorityNormal, 0, 512);
+  ModBus_TaskHandle = osThreadCreate(osThread(ModBus_Task), NULL);
+
+  /* USER CODE BEGIN RTOS_THREADS */
    /* add threads, ... */
-   /* USER CODE END RTOS_THREADS */
-   
+  /* USER CODE END RTOS_THREADS */
+
 }
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -146,8 +146,8 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
-   /* USER CODE BEGIN StartDefaultTask */
-   uint8_t TxBuff[4] = {0xff};
+  /* USER CODE BEGIN StartDefaultTask */
+   uint8_t TxBuff[4] = {0xff,};
    //uint8_t RxBuff[50] = {0};
    uint16_t Size = 4;
    HAL_StatusTypeDef StatusSPI1;
@@ -157,18 +157,20 @@ void StartDefaultTask(void const * argument)
    /* Infinite loop */
    for(;;)
    {
-      if(start){
-         start = 0;
-         
-         StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
-         StatusSPI1 = StatusSPI1;
-         HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
-         osDelay(1);
-         HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
-         
-      }
+     
+    TxBuff[0] = *(uint8_t*)&data_for_hc595;
+    TxBuff[1] = *(uint8_t*)(&data_for_hc595)+1;
+    TxBuff[2] = *(uint8_t*)(&data_for_hc595)+2;
+    TxBuff[3] = *(uint8_t*)(&data_for_hc595)+3;
+    
+     HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+     StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
+     StatusSPI1 = StatusSPI1;
+     HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+     
+      osDelay(1);
    }
-   /* USER CODE END StartDefaultTask */
+  /* USER CODE END StartDefaultTask */
 }
 
 /* USER CODE BEGIN Header_ModBusTask */
@@ -180,7 +182,7 @@ void StartDefaultTask(void const * argument)
 /* USER CODE END Header_ModBusTask */
 void ModBusTask(void const * argument)
 {
-   /* USER CODE BEGIN ModBusTask */
+  /* USER CODE BEGIN ModBusTask */
    /* Infinite loop */
    eMBErrorCode eStatus = eMBInit( MB_RTU, settings.SlaveAddress, 3, settings.BaudRate, MB_PAR_NONE );
    eStatus = eMBEnable();
@@ -190,7 +192,7 @@ void ModBusTask(void const * argument)
       eMBPoll();
       //taskYIELD();
    }
-   /* USER CODE END ModBusTask */
+  /* USER CODE END ModBusTask */
 }
 
 /* Private application code --------------------------------------------------*/
@@ -948,7 +950,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                
                break;
             }
-           case 60: 
+           case 60: // chanels is down
             {	
                
                break;

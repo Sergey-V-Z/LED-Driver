@@ -2,9 +2,9 @@
 
 
 #Abbreviations
-cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.4\common\bin\SourceIndexer.exe
-ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.4\common\bin\PbdLink.exe
-bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.4\common\bin\makeBrowseData.exe
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
 
 
 
@@ -35,6 +35,7 @@ build portevent.pbi : index portevent.xcl
 build portserial.pbi : index portserial.xcl
 build porttimer.pbi : index porttimer.xcl
 build adc.pbi : index adc.xcl
+build dma.pbi : index dma.xcl
 build freertos.pbi : index freertos.xcl
 build gpio.pbi : index gpio.xcl
 build main.pbi : index main.xcl
@@ -76,14 +77,14 @@ build queue.pbi : index queue.xcl
 build stream_buffer.pbi : index stream_buffer.xcl
 build tasks.pbi : index tasks.xcl
 build timers.pbi : index timers.xcl
-build prog_part0.pbi : link flash_spi.pbi mb.pbi mbcrc.pbi mbfunccoils.pbi mbfuncdiag.pbi mbfuncdisc.pbi mbfuncholding.pbi
-build prog_part1.pbi : link mbfuncinput.pbi mbfuncother.pbi mbrtu.pbi mbutils.pbi portevent.pbi portserial.pbi porttimer.pbi
-build prog_part2.pbi : link adc.pbi freertos.pbi gpio.pbi main.pbi spi.pbi stm32f3xx_hal_msp.pbi stm32f3xx_hal_timebase_tim.pbi
-build prog_part3.pbi : link stm32f3xx_it.pbi tim.pbi usart.pbi system_stm32f3xx.pbi stm32f3xx_hal.pbi stm32f3xx_hal_adc.pbi stm32f3xx_hal_adc_ex.pbi
-build prog_part4.pbi : link stm32f3xx_hal_cortex.pbi stm32f3xx_hal_dma.pbi stm32f3xx_hal_exti.pbi stm32f3xx_hal_flash.pbi stm32f3xx_hal_flash_ex.pbi stm32f3xx_hal_gpio.pbi stm32f3xx_hal_i2c.pbi
-build prog_part5.pbi : link stm32f3xx_hal_i2c_ex.pbi stm32f3xx_hal_pwr.pbi stm32f3xx_hal_pwr_ex.pbi stm32f3xx_hal_rcc.pbi stm32f3xx_hal_rcc_ex.pbi stm32f3xx_hal_spi.pbi stm32f3xx_hal_spi_ex.pbi
-build prog_part6.pbi : link stm32f3xx_hal_tim.pbi stm32f3xx_hal_tim_ex.pbi stm32f3xx_hal_uart.pbi stm32f3xx_hal_uart_ex.pbi cmsis_os.pbi croutine.pbi event_groups.pbi
-build prog_part7.pbi : link heap_4.pbi list.pbi port.pbi queue.pbi stream_buffer.pbi tasks.pbi timers.pbi
+build prog_part0.pbi : link flash_spi.pbi mb.pbi mbcrc.pbi mbfunccoils.pbi mbfuncdiag.pbi mbfuncdisc.pbi mbfuncholding.pbi mbfuncinput.pbi
+build prog_part1.pbi : link mbfuncother.pbi mbrtu.pbi mbutils.pbi portevent.pbi portserial.pbi porttimer.pbi adc.pbi dma.pbi
+build prog_part2.pbi : link freertos.pbi gpio.pbi main.pbi spi.pbi stm32f3xx_hal_msp.pbi stm32f3xx_hal_timebase_tim.pbi stm32f3xx_it.pbi tim.pbi
+build prog_part3.pbi : link usart.pbi system_stm32f3xx.pbi stm32f3xx_hal.pbi stm32f3xx_hal_adc.pbi stm32f3xx_hal_adc_ex.pbi stm32f3xx_hal_cortex.pbi stm32f3xx_hal_dma.pbi stm32f3xx_hal_exti.pbi
+build prog_part4.pbi : link stm32f3xx_hal_flash.pbi stm32f3xx_hal_flash_ex.pbi stm32f3xx_hal_gpio.pbi stm32f3xx_hal_i2c.pbi stm32f3xx_hal_i2c_ex.pbi stm32f3xx_hal_pwr.pbi stm32f3xx_hal_pwr_ex.pbi stm32f3xx_hal_rcc.pbi
+build prog_part5.pbi : link stm32f3xx_hal_rcc_ex.pbi stm32f3xx_hal_spi.pbi stm32f3xx_hal_spi_ex.pbi stm32f3xx_hal_tim.pbi stm32f3xx_hal_tim_ex.pbi stm32f3xx_hal_uart.pbi stm32f3xx_hal_uart_ex.pbi cmsis_os.pbi
+build prog_part6.pbi : link croutine.pbi event_groups.pbi heap_4.pbi list.pbi port.pbi queue.pbi stream_buffer.pbi tasks.pbi
+build prog_part7.pbi : link timers.pbi
 build prog.pbd : link prog_part0.pbi prog_part1.pbi prog_part2.pbi prog_part3.pbi prog_part4.pbi prog_part5.pbi prog_part6.pbi prog_part7.pbi
 build prog.pbw : browsedata prog.pbd
 
