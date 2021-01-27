@@ -45,7 +45,6 @@ typedef struct
   uint32_t DIMChannel;
   uint32_t CurrentChannel;
   
-   
 }Channel_t;  
 //******************
 //

@@ -53,19 +53,18 @@ void flash :: Write(settings_t data){
   uint8_t sr[1] = {0x05};
   uint8_t rd[5] = {0};
   
-  HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_RESET);
-  StatusSPI = HAL_SPI_Transmit(hspi, sr, 1, 10); // 
-  StatusSPI = HAL_SPI_Receive(hspi, rd, 2, 10);
-  HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_SET);
-  
+  // write eneable 
   HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_RESET);
   HAL_SPI_Transmit(hspi, wren, 1, 10); //
   HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_SET);
   
+  // read status register
   HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_RESET);
   StatusSPI = HAL_SPI_Transmit(hspi, sr, 1, 10); // 
   StatusSPI = HAL_SPI_Receive(hspi, rd, 2, 10);
   HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_SET);
+  
+  
   
   HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_RESET);
   StatusSPI = HAL_SPI_Transmit(hspi, cmdWrite, 4, 10); // cmd write + addres
