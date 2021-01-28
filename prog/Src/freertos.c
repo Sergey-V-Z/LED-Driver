@@ -56,16 +56,23 @@ using namespace std;
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-extern SPI_HandleTypeDef hspi3;
+extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef hadc2;
+extern ADC_HandleTypeDef hadc4;
 extern SPI_HandleTypeDef hspi1;
+extern SPI_HandleTypeDef hspi3;
 extern settings_t settings;
 int start = 1;
 
 uint16_t dim_chanels[25] = {0,};
 uint16_t enable_chanels[25] = {0,};
 uint16_t chanels_is_down[25] = {0,};
+//bufers for adc
+uint16_t CH1_CH10[10] = {0,};
+uint16_t CH11_CH12[2] = {0,};
+uint16_t CH13_CH25[13] = {0,};
 
-uint32_t data_for_hc595 = 0;
+uint32_t data_for_hc595 = 0xffffffff;
 /* USER CODE END Variables */
 osThreadId MainTaskHandle;
 osThreadId ModBus_TaskHandle;
@@ -147,27 +154,33 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-   uint8_t TxBuff[4] = {0xff,};
-   //uint8_t RxBuff[50] = {0};
+   
+   // for hc595
+   uint8_t TxBuff[4] = {0,};
    uint16_t Size = 4;
    HAL_StatusTypeDef StatusSPI1;
    HAL_GPIO_WritePin(MR_GPIO_Port, MR_Pin, GPIO_PIN_SET);
    HAL_GPIO_WritePin(OE_GPIO_Port, OE_Pin, GPIO_PIN_RESET);
    
+   // for adc
+   HAL_ADC_Start_DMA(&hadc1,(uint32_t*) &CH1_CH10,10);
+   HAL_ADC_Start_DMA(&hadc2,(uint32_t*) &CH11_CH12,2);
+   HAL_ADC_Start_DMA(&hadc4,(uint32_t*) &CH13_CH25,13);
+   
    /* Infinite loop */
    for(;;)
    {
      
-    TxBuff[0] = *(uint8_t*)&data_for_hc595;
-    TxBuff[1] = *(uint8_t*)(&data_for_hc595)+1;
-    TxBuff[2] = *(uint8_t*)(&data_for_hc595)+2;
-    TxBuff[3] = *(uint8_t*)(&data_for_hc595)+3;
-    
-     HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
-     StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
-     StatusSPI1 = StatusSPI1;
-     HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
-     
+      TxBuff[0] = *(uint8_t*)&data_for_hc595;
+      TxBuff[1] = *(uint8_t*)(&data_for_hc595)+1;
+      TxBuff[2] = *(uint8_t*)(&data_for_hc595)+2;
+      TxBuff[3] = *(uint8_t*)(&data_for_hc595)+3;
+      
+      HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+      StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
+      StatusSPI1 = StatusSPI1;
+      HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+      
       osDelay(1);
    }
   /* USER CODE END StartDefaultTask */
@@ -197,6 +210,12 @@ void ModBusTask(void const * argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
+{
+   
+}
+
 /*description https://www.freemodbus.org/api/group__modbus__registers.html*/
 //0x04
 eMBErrorCode
@@ -210,7 +229,7 @@ eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
 eMBErrorCode
 eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode )
 {
-   
+   eMBErrorCode    eStatus = MB_ENOERR;
    //uint8_t CMD[5] = {0};
    volatile HAL_StatusTypeDef status;
    
@@ -449,7 +468,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                }               
                break;
             }
-           case 49: 
+           case 39: 
             {	
                if(!*(pucRegBuffer+1)){
                   data_for_hc595 |= (1 << 4);
@@ -1089,9 +1108,6 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
          break;
       }
    }
-   
-   
-   eMBErrorCode    eStatus = MB_ENOERR;
    
    
    return eStatus;

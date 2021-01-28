@@ -1251,6 +1251,9 @@
                 <name>$PROJ_DIR$\..\Src\adc.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Src\dma.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Src\freertos.c</name>
                 <configuration>
                     <name>prog</name>

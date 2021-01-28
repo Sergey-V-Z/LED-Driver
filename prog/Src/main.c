@@ -50,7 +50,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-settings_t settings = {0}; //{115200, 0x0D, 0};
+settings_t settings = {0,}; //{115200, 0x0D, 0};
 bool resetSettings = false;
 flash *FlashP;
 /* USER CODE END PV */
