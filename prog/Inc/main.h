@@ -59,7 +59,7 @@ typedef struct
 {
   uint32_t BaudRate;
   uint32_t  SlaveAddress;
-  Channel_t Channels[25];  
+  Channel_t Channels[5];  
    
 }settings_t;
 /* USER CODE END ET */

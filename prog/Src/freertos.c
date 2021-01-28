@@ -68,9 +68,9 @@ uint16_t dim_chanels[25] = {0,};
 uint16_t enable_chanels[25] = {0,};
 uint16_t chanels_is_down[25] = {0,};
 //bufers for adc
-uint16_t CH1_CH10[10] = {0,};
-uint16_t CH11_CH12[2] = {0,};
-uint16_t CH13_CH25[13] = {0,};
+uint32_t CH1_CH10[10] = {0,};
+uint32_t CH11_CH12[2] = {0,};
+uint32_t CH13_CH25[13] = {0,};
 
 uint32_t data_for_hc595 = 0xffffffff;
 /* USER CODE END Variables */
@@ -163,9 +163,9 @@ void StartDefaultTask(void const * argument)
    HAL_GPIO_WritePin(OE_GPIO_Port, OE_Pin, GPIO_PIN_RESET);
    
    // for adc
-   HAL_ADC_Start_DMA(&hadc1,(uint32_t*) &CH1_CH10,10);
-   HAL_ADC_Start_DMA(&hadc2,(uint32_t*) &CH11_CH12,2);
-   HAL_ADC_Start_DMA(&hadc4,(uint32_t*) &CH13_CH25,13);
+   HAL_ADC_Start_DMA(&hadc1,(uint32_t*)CH1_CH10,20);
+   HAL_ADC_Start_DMA(&hadc2,(uint32_t*)CH11_CH12,4);
+   HAL_ADC_Start_DMA(&hadc4,(uint32_t*)CH13_CH25,26);
    
    /* Infinite loop */
    for(;;)
