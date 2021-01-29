@@ -5,22 +5,10 @@
 #include "main.h"
 //#include "cmsis_os.h"
 
-//******************
-//
-// DESCRIPTION:
-//  структура для хранения описания пинов для флешки
-//
-// CREATED: 24.01.2021, by Ierixon-HP
-//
-// FILE: flash_spi.h
-//
-
 #define DEBUG_UART               &huart1
-#define W25QXX_SPI_PTR           &hspi2
-//#define W25QXX_SPI               SPI2
 
-#define W25QFLASH_CS_SELECT      HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET)
-#define W25QFLASH_CS_UNSELECT    HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_SET)
+#define W25QFLASH_CS_SELECT      HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_RESET);
+#define W25QFLASH_CS_UNSELECT    HAL_GPIO_WritePin(ChipSelect.GPIO_Port, ChipSelect.GPIO_Pin, GPIO_PIN_SET);
 
 
 #define _W25QXX_USE_FREERTOS     0
@@ -43,6 +31,17 @@
 #define W25_WRITE_STATUS_3    0x11
 #define W25_READ_UNIQUE_ID    0x4B
 
+#define W25QXX_DUMMY_BYTE     0xA5
+
+//******************
+//
+// DESCRIPTION:
+//  структура для хранения описания пинов для флешки
+//
+// CREATED: 24.01.2021, by Ierixon-HP
+//
+// FILE: flash_spi.h
+//
 typedef struct 
   {
     GPIO_TypeDef* GPIO_Port;
@@ -82,7 +81,7 @@ typedef struct
     
   }w25qxx_t;
 
-extern w25qxx_t	w25qxx;
+//extern w25qxx_t	w25qxx;
 
 //******************
 // CLASS: flash
@@ -99,11 +98,9 @@ class flash
    public:
     flash();
     ~flash();
-    bool Init(SPI_HandleTypeDef *hspi, uint32_t startAddr,  pins_spi_t ChipSelect, pins_spi_t WriteProtect, pins_spi_t Hold);
+    uint8_t Init(SPI_HandleTypeDef *hspi, uint32_t startAddr,  pins_spi_t ChipSelect, pins_spi_t WriteProtect, pins_spi_t Hold);
     void Read(settings_t *data);
     void Write(settings_t data);
-    
-    uint8_t	W25qxx_Init(void);
     
     void W25qxx_EraseChip(void);
     void W25qxx_EraseSector(uint32_t SectorAddr);
@@ -120,6 +117,7 @@ class flash
     uint8_t W25qxx_IsEmptyBlock(uint32_t Block_Address, uint32_t OffsetInByte);
     
     void W25qxx_WriteByte(uint8_t byte, uint32_t addr);
+    void W25qxx_WriteBytes(uint8_t *pBuffer, uint32_t addr, uint32_t NumByteToWrite);
     void W25qxx_WritePage(uint8_t *pBuffer, uint32_t Page_Address, uint32_t OffsetInByte, uint32_t NumByteToWrite_up_to_PageSize);
     void W25qxx_WriteSector(uint8_t *pBuffer, uint32_t Sector_Address, uint32_t OffsetInByte, uint32_t NumByteToWrite_up_to_SectorSize);
     void W25qxx_WriteBlock(uint8_t* pBuffer, uint32_t Block_Address, uint32_t OffsetInByte, uint32_t NumByteToWrite_up_to_BlockSize);
@@ -133,17 +131,21 @@ class flash
     
     
    private:
-    uint8_t	W25qxx_Spi(uint8_t Data);
-    
+    uint8_t     W25qxx_Spi(uint8_t Data);
+    uint32_t    W25qxx_ReadID();
+    void        W25qxx_WaitForWriteEnd();
+    void        W25qxx_WriteDisable();
+    void        W25qxx_WriteEnable();
+    void        W25qxx_ReadUniqID();
+       
     uint32_t StartAddres;
-    uint8_t cmdRead[4] = {0x03, 0, 0, 1};
-    uint8_t cmdWrite[4] = {0x02, 0, 0, 1};
+
     SPI_HandleTypeDef *hspi;
     pins_spi_t ChipSelect;
     pins_spi_t WriteProtect; 
     pins_spi_t Hold;
     HAL_StatusTypeDef lastStatusSPI;
-    
+    w25qxx_t w25qxx;
     
   };
 

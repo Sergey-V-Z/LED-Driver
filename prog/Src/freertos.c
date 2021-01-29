@@ -181,8 +181,11 @@ void StartDefaultTask(void const * argument)
       StatusSPI1 = StatusSPI1;
       HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
       
+      
       osDelay(1);
    }
+   
+   
   /* USER CODE END StartDefaultTask */
 }
 
@@ -970,8 +973,10 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                break;
             }
            case 60: // chanels is down
-            {	
+            {	//V=ADCval*VALmax/ADCmax. 4 095
                
+               //*pucRegBuffer = ((UCHAR*) &CH1_CH10[0])+1;
+               //*pucRegBuffer +1 = ((UCHAR*) &CH1_CH10[0]);
                break;
             }
            case 61: 
