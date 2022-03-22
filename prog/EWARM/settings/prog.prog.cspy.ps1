@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\Kicads Schem\LED-Driver\prog\EWARM\settings\prog.prog.general.xcl" --backend -f "D:\Kicads Schem\LED-Driver\prog\EWARM\settings\prog.prog.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Radio\Jobe\LED Driver\prog\EWARM\settings\prog.prog.general.xcl" --backend -f "D:\Radio\Jobe\LED Driver\prog\EWARM\settings\prog.prog.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\Kicads Schem\LED-Driver\prog\EWARM\settings\prog.prog.general.xcl" --debug_file=$debugfile --backend -f "D:\Kicads Schem\LED-Driver\prog\EWARM\settings\prog.prog.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Radio\Jobe\LED Driver\prog\EWARM\settings\prog.prog.general.xcl" --debug_file=$debugfile --backend -f "D:\Radio\Jobe\LED Driver\prog\EWARM\settings\prog.prog.driver.xcl" 
 }

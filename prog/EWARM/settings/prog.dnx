@@ -20,7 +20,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>842434448</Checksum>
+        <Checksum>1914952987</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -61,6 +61,9 @@
         <Fmt1>settings_t-BaudRate	4	0</Fmt1>
         <Fmt2>settings_t-SlaveAddress	4	0</Fmt2>
     </struct_types>
+    <array_types>
+        <Fmt0>uint16_t[10]	3	0</Fmt0>
+    </array_types>
     <watch_formats>
         <Fmt0>{W}42:data_for_hc595	1	0</Fmt0>
     </watch_formats>
@@ -135,8 +138,7 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Src\main.c}.124.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Count>1</Count>
+        <Count>0</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

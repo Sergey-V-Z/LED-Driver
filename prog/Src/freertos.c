@@ -25,7 +25,7 @@
 #include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */     
+/* USER CODE BEGIN Includes */
 #include "mb.h"
 #include "mbport.h"
 
@@ -68,9 +68,9 @@ uint16_t dim_chanels[25] = {0,};
 uint16_t enable_chanels[25] = {0,};
 uint16_t chanels_is_down[25] = {0,};
 //bufers for adc
-uint32_t CH1_CH10[10] = {0,};
-uint32_t CH11_CH12[2] = {0,};
-uint32_t CH13_CH25[13] = {0,};
+uint16_t CH1_CH10[10] = {0,};
+uint16_t CH11_CH12[2] = {0,};
+uint16_t CH13_CH25[13] = {0,};
 
 uint32_t data_for_hc595 = 0xffffffff;
 /* USER CODE END Variables */
@@ -88,7 +88,7 @@ void ModBusTask(void const * argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
-extern "C" void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
+void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
 
 /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
 static StaticTask_t xIdleTaskTCBBuffer;
@@ -156,28 +156,21 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN StartDefaultTask */
    
    // for hc595
-   uint8_t TxBuff[4] = {0,};
-   uint16_t Size = 4;
    HAL_StatusTypeDef StatusSPI1;
    HAL_GPIO_WritePin(MR_GPIO_Port, MR_Pin, GPIO_PIN_SET);
    HAL_GPIO_WritePin(OE_GPIO_Port, OE_Pin, GPIO_PIN_RESET);
    
    // for adc
-   HAL_ADC_Start_DMA(&hadc1,(uint32_t*)CH1_CH10,20);
-   HAL_ADC_Start_DMA(&hadc2,(uint32_t*)CH11_CH12,4);
-   HAL_ADC_Start_DMA(&hadc4,(uint32_t*)CH13_CH25,26);
+   HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&CH1_CH10,10);
+   HAL_ADC_Start_DMA(&hadc2,(uint32_t*)&CH11_CH12,2);
+   HAL_ADC_Start_DMA(&hadc4,(uint32_t*)&CH13_CH25,1);
    
    /* Infinite loop */
    for(;;)
    {
-     
-      TxBuff[0] = *(uint8_t*)&data_for_hc595;
-      TxBuff[1] = *(uint8_t*)(&data_for_hc595)+1;
-      TxBuff[2] = *(uint8_t*)(&data_for_hc595)+2;
-      TxBuff[3] = *(uint8_t*)(&data_for_hc595)+3;
       
       HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
-      StatusSPI1 = HAL_SPI_Transmit(&hspi1, TxBuff, Size, 100);
+      StatusSPI1 = HAL_SPI_Transmit(&hspi1, (uint8_t*)&data_for_hc595, 4, 100);
       StatusSPI1 = StatusSPI1;
       HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
       
@@ -438,211 +431,76 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 35: // start enable
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 0);
+                  data_for_hc595 |= (1 << 31);
                }else{
-                  data_for_hc595 &= ~(1 << 0);
+                  data_for_hc595 &= ~(1 << 31);
                }
                break;
             }
            case 36: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 1);
+                  data_for_hc595 |= (1 << 30);
                }else{
-                  data_for_hc595 &= ~(1 << 1);
+                  data_for_hc595 &= ~(1 << 30);
                }               
                break;
             }  
            case 37: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 2);
+                  data_for_hc595 |= (1 << 29);
                }else{
-                  data_for_hc595 &= ~(1 << 2);
+                  data_for_hc595 &= ~(1 << 29);
                }               
                break;
             }
            case 38: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 3);
+                  data_for_hc595 |= (1 << 28);
                }else{
-                  data_for_hc595 &= ~(1 << 3);
+                  data_for_hc595 &= ~(1 << 28);
                }               
                break;
             }
            case 39: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 4);
+                  data_for_hc595 |= (1 << 27);
                }else{
-                  data_for_hc595 &= ~(1 << 4);
+                  data_for_hc595 &= ~(1 << 27);
                }               
                break;
             }
            case 40: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 5);
+                  data_for_hc595 |= (1 << 26);
                }else{
-                  data_for_hc595 &= ~(1 << 5);
+                  data_for_hc595 &= ~(1 << 26);
                }               
                break;
             }
            case 41: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 6);
+                  data_for_hc595 |= (1 << 25);
                }else{
-                  data_for_hc595 &= ~(1 << 6);
+                  data_for_hc595 &= ~(1 << 25);
                }               
                break;
             }
            case 42: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 7);
+                  data_for_hc595 |= (1 << 24);
                }else{
-                  data_for_hc595 &= ~(1 << 7);
+                  data_for_hc595 &= ~(1 << 24);
                }               
                break;
             }
            case 43: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 8);
-               }else{
-                  data_for_hc595 &= ~(1 << 8);
-               }               
-               break;
-            }
-           case 44: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 9);
-               }else{
-                  data_for_hc595 &= ~(1 << 9);
-               }               
-               break;
-            }
-           case 45: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 10);
-               }else{
-                  data_for_hc595 &= ~(1 << 10);
-               }               
-               break;
-            }
-           case 46: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 11);
-               }else{
-                  data_for_hc595 &= ~(1 << 11);
-               }              
-               break;
-            }  
-           case 47: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 12);
-               }else{
-                  data_for_hc595 &= ~(1 << 12);
-               }               
-               break;
-            }
-           case 48: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 13);
-               }else{
-                  data_for_hc595 &= ~(1 << 13);
-               }               
-               break;
-            }
-           case 49: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 14);
-               }else{
-                  data_for_hc595 &= ~(1 << 14);
-               }               
-               break;
-            }
-           case 50: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 15);
-               }else{
-                  data_for_hc595 &= ~(1 << 15);
-               }               
-               break;
-            }
-           case 51: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 16);
-               }else{
-                  data_for_hc595 &= ~(1 << 16);
-               }               
-               break;
-            }
-           case 52: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 17);
-               }else{
-                  data_for_hc595 &= ~(1 << 17);
-               }               
-               break;
-            }
-           case 53: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 18);
-               }else{
-                  data_for_hc595 &= ~(1 << 18);
-               }               
-               break;
-            }
-           case 54: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 19);
-               }else{
-                  data_for_hc595 &= ~(1 << 19);
-               }               
-               break;
-            }
-           case 55: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 20);
-               }else{
-                  data_for_hc595 &= ~(1 << 20);
-               }               
-               break;
-            }
-           case 56: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 21);
-               }else{
-                  data_for_hc595 &= ~(1 << 21);
-               }               
-               break;
-            }  
-           case 57: 
-            {	
-               if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 22);
-               }else{
-                  data_for_hc595 &= ~(1 << 22);
-               }               
-               break;
-            }
-           case 58: 
             {	
                if(!*(pucRegBuffer+1)){
                   data_for_hc595 |= (1 << 23);
@@ -651,12 +509,147 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                }               
                break;
             }
+           case 44: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 22);
+               }else{
+                  data_for_hc595 &= ~(1 << 22);
+               }               
+               break;
+            }
+           case 45: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 21);
+               }else{
+                  data_for_hc595 &= ~(1 << 21);
+               }               
+               break;
+            }
+           case 46: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 20);
+               }else{
+                  data_for_hc595 &= ~(1 << 20);
+               }              
+               break;
+            }  
+           case 47: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 19);
+               }else{
+                  data_for_hc595 &= ~(1 << 19);
+               }               
+               break;
+            }
+           case 48: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 18);
+               }else{
+                  data_for_hc595 &= ~(1 << 18);
+               }               
+               break;
+            }
+           case 49: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 17);
+               }else{
+                  data_for_hc595 &= ~(1 << 17);
+               }               
+               break;
+            }
+           case 50: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 16);
+               }else{
+                  data_for_hc595 &= ~(1 << 16);
+               }               
+               break;
+            }
+           case 51: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 15);
+               }else{
+                  data_for_hc595 &= ~(1 << 15);
+               }               
+               break;
+            }
+           case 52: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 14);
+               }else{
+                  data_for_hc595 &= ~(1 << 14);
+               }               
+               break;
+            }
+           case 53: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 13);
+               }else{
+                  data_for_hc595 &= ~(1 << 13);
+               }               
+               break;
+            }
+           case 54: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 12);
+               }else{
+                  data_for_hc595 &= ~(1 << 12);
+               }               
+               break;
+            }
+           case 55: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 11);
+               }else{
+                  data_for_hc595 &= ~(1 << 11);
+               }               
+               break;
+            }
+           case 56: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 10);
+               }else{
+                  data_for_hc595 &= ~(1 << 10);
+               }               
+               break;
+            }  
+           case 57: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 9);
+               }else{
+                  data_for_hc595 &= ~(1 << 9);
+               }               
+               break;
+            }
+           case 58: 
+            {	
+               if(!*(pucRegBuffer+1)){
+                  data_for_hc595 |= (1 << 8);
+               }else{
+                  data_for_hc595 &= ~(1 << 8);
+               }               
+               break;
+            }
            case 59: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 24);
+                  data_for_hc595 |= (1 << 7);
                }else{
-                  data_for_hc595 &= ~(1 << 24);
+                  data_for_hc595 &= ~(1 << 7);
                }               
                break;
             }
@@ -973,7 +966,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                break;
             }
            case 60: // chanels is down
-            {	//V=ADCval*VALmax/ADCmax. 4 095
+            {	//V=ADCval*VALmax/ADCmax. 4095
                
                //*pucRegBuffer = ((UCHAR*) &CH1_CH10[0])+1;
                //*pucRegBuffer +1 = ((UCHAR*) &CH1_CH10[0]);
@@ -1132,4 +1125,3 @@ eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNDiscrete )
 }       
 /* USER CODE END Application */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
