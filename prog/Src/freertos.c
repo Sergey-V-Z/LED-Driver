@@ -88,7 +88,7 @@ void ModBusTask(void const * argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
-void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
+extern "C" void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
 
 /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
 static StaticTask_t xIdleTaskTCBBuffer;
@@ -430,6 +430,496 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             }
            case 35: // start enable
             {	
+               uint16_t temp = data_for_hc595 & (1 << 31);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;
+              
+               break;
+            }
+           case 36: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 30);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }  
+           case 37: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 29);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 38: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 28);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;             
+               break;
+            }
+           case 39: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 27);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 40: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 26);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 41: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 25);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 42: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 24);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 43: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 23);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 44: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 22);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 45: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 21);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;            
+               break;
+            }
+           case 46: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 20);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;             
+               break;
+            }  
+           case 47: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 19);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 48: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 18);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 49: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 17);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 50: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 16);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;                
+               break;
+            }
+           case 51: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 15);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 52: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 14);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 53: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 13);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 54: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 12);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
+               break;
+            }
+           case 55: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 11);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 56: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 10);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;             
+               break;
+            }  
+           case 57: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 9);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 58: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 8);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 59: 
+            {	
+               uint16_t temp = data_for_hc595 & (1 << 7);
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;              
+               break;
+            }
+           case 60: // chanels is down
+            {	//V=ADCval*VALmax/ADCmax. 4095
+               
+               //*pucRegBuffer = ((UCHAR*) &CH1_CH10[0])+1;
+               //*pucRegBuffer +1 = ((UCHAR*) &CH1_CH10[0]);
+               break;
+            }
+           case 61: 
+            {	
+               
+               break;
+            }
+           case 62: 
+            {	
+               
+               break;
+            }
+           case 63: 
+            {	
+               
+               break;
+            }
+           case 64: 
+            {	
+               
+               break;
+            }
+           case 65: 
+            {	
+               
+               break;
+            }
+           case 66: 
+            {	
+               
+               break;
+            }
+           case 67: 
+            {	
+               
+               break;
+            }  
+           case 68: 
+            {	
+               
+               break;
+            }
+           case 69: 
+            {	
+               
+               break;
+            }
+           case 70: 
+            {	
+               
+               break;
+            }
+           case 71: 
+            {	
+               
+               break;
+            }
+           case 72: 
+            {	
+               
+               break;
+            }
+           case 73: 
+            {	
+               
+               break;
+            }
+           case 74: 
+            {	
+               
+               break;
+            }
+           case 75: 
+            {	
+               
+               break;
+            }
+           case 76: 
+            {	
+               
+               break;
+            }
+           case 77: 
+            {	
+               
+               break;
+            }  
+           case 78: 
+            {	
+               
+               break;
+            }
+           case 79: 
+            {	
+               
+               break;
+            }
+           case 80: 
+            {	
+               
+               break;
+            }
+           case 81: 
+            {	
+               
+               break;
+            }
+           case 82: 
+            {	
+               
+               break;
+            }
+           case 83: 
+            {	
+               
+               break;
+            }
+           case 84: 
+            {	
+               
+               break;
+            }            
+           default:
+            {	
+               eStatus = MB_ENOREG;
+               break;
+            }
+         }
+         
+         break;
+      }
+     case MB_REG_WRITE:
+      {	
+         
+         switch (usAddress)
+         {
+           case 0: //  Stop/Start
+            {	
+               
+               break;
+            }
+           case 1: // Dir
+            {	
+               
+               break;
+            }
+           case 2: //Status start/stop
+            {	
+               
+               break;
+            }
+           case 3: //Status Dir
+            {	
+               
+               break;
+            }
+           case 4: // RPM
+            {	
+               
+               break;
+            }
+           case 5: // 
+            {	
+               break;
+            }
+           case 6: // 
+            {	
+               
+               break;
+            }
+           case 7: // 
+            {	
+               break;
+            }
+           case 8: 
+            {	
+               
+               break;
+            }
+           case 9: 
+            {	
+               
+               break;
+            }
+           case 10: 
+            {	
+               
+               break;
+            }
+           case 11: 
+            {	
+               
+               break;
+            }
+           case 12: 
+            {	
+               
+               break;
+            }
+           case 13: 
+            {	
+               
+               break;
+            }
+           case 14: 
+            {	
+               
+               break;
+            }
+           case 15: 
+            {	
+               
+               break;
+            }
+           case 16: 
+            {	
+               
+               break;
+            }
+           case 17: 
+            {	
+               
+               break;
+            }
+           case 18: 
+            {	
+               
+               break;
+            }
+           case 19: 
+            {	
+               
+               break;
+            }
+           case 20: 
+            {	
+               
+               break;
+            }
+           case 21: 
+            {	
+               
+               break;
+            }
+           case 22: 
+            {	
+               
+               break;
+            }
+           case 23: 
+            {	
+               
+               break;
+            }
+           case 24: 
+            {	
+               
+               break;
+            }
+           case 25: 
+            {	
+               
+               break;
+            }
+           case 26: 
+            {	
+               
+               break;
+            }
+           case 27: 
+            {	
+               
+               break;
+            }
+           case 28: 
+            {	
+               
+               break;
+            } 
+           case 29: 
+            {	
+               
+               break;
+            }
+           case 30: 
+            {	
+               
+               break;
+            }
+           case 31: 
+            {	
+               
+               break;
+            }
+           case 32: 
+            {	
+               
+               break;
+            }
+           case 33: 
+            {	
+               
+               break;
+            }
+           case 34: 
+            {	
+               
+               break;
+            }        
+           case 35: // start enable
+            {	
                if(!*(pucRegBuffer+1)){
                   data_for_hc595 |= (1 << 31);
                }else{
@@ -651,318 +1141,6 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                }else{
                   data_for_hc595 &= ~(1 << 7);
                }               
-               break;
-            }
-           default:
-            {	
-               eStatus = MB_ENOREG;
-               break;
-            }
-         }
-         
-         break;
-      }
-     case MB_REG_WRITE:
-      {	
-         
-         switch (usAddress)
-         {
-           case 0: //  Stop/Start
-            {	
-               
-               break;
-            }
-           case 1: // Dir
-            {	
-               
-               break;
-            }
-           case 2: //Status start/stop
-            {	
-               
-               break;
-            }
-           case 3: //Status Dir
-            {	
-               
-               break;
-            }
-           case 4: // RPM
-            {	
-               
-               break;
-            }
-           case 5: // 
-            {	
-               break;
-            }
-           case 6: // 
-            {	
-               
-               break;
-            }
-           case 7: // 
-            {	
-               break;
-            }
-           case 8: 
-            {	
-               
-               break;
-            }
-           case 9: 
-            {	
-               
-               break;
-            }
-           case 10: 
-            {	
-               
-               break;
-            }
-           case 11: 
-            {	
-               
-               break;
-            }
-           case 12: 
-            {	
-               
-               break;
-            }
-           case 13: 
-            {	
-               
-               break;
-            }
-           case 14: 
-            {	
-               
-               break;
-            }
-           case 15: 
-            {	
-               
-               break;
-            }
-           case 16: 
-            {	
-               
-               break;
-            }
-           case 17: 
-            {	
-               
-               break;
-            }
-           case 18: 
-            {	
-               
-               break;
-            }
-           case 19: 
-            {	
-               
-               break;
-            }
-           case 20: 
-            {	
-               
-               break;
-            }
-           case 21: 
-            {	
-               
-               break;
-            }
-           case 22: 
-            {	
-               
-               break;
-            }
-           case 23: 
-            {	
-               
-               break;
-            }
-           case 24: 
-            {	
-               
-               break;
-            }
-           case 25: 
-            {	
-               
-               break;
-            }
-           case 26: 
-            {	
-               
-               break;
-            }
-           case 27: 
-            {	
-               
-               break;
-            }
-           case 28: 
-            {	
-               
-               break;
-            } 
-           case 29: 
-            {	
-               
-               break;
-            }
-           case 30: 
-            {	
-               
-               break;
-            }
-           case 31: 
-            {	
-               
-               break;
-            }
-           case 32: 
-            {	
-               
-               break;
-            }
-           case 33: 
-            {	
-               
-               break;
-            }
-           case 34: 
-            {	
-               
-               break;
-            }
-           case 35: 
-            {	
-               
-               break;
-            }
-           case 36: 
-            {	
-               
-               break;
-            }
-           case 37: 
-            {	
-               
-               break;
-            }  
-           case 38: 
-            {	
-               
-               break;
-            }
-           case 39: 
-            {	
-               
-               break;
-            }
-           case 40: 
-            {	
-               
-               break;
-            }
-           case 41: 
-            {	
-               
-               break;
-            }
-           case 42: 
-            {	
-               
-               break;
-            }
-           case 43: 
-            {	
-               
-               break;
-            }
-           case 44: 
-            {	
-               
-               break;
-            }
-           case 45: 
-            {	
-               
-               break;
-            }
-           case 46: 
-            {	
-               
-               break;
-            }
-           case 47: 
-            {	
-               
-               break;
-            }  
-           case 48: 
-            {	
-               
-               break;
-            }
-           case 49: 
-            {	
-               
-               break;
-            }
-           case 50: 
-            {	
-               
-               break;
-            }
-           case 51: 
-            {	
-               
-               break;
-            }
-           case 52: 
-            {	
-               
-               break;
-            }
-           case 53: 
-            {	
-               
-               break;
-            }
-           case 54: 
-            {	
-               
-               break;
-            }
-           case 55: 
-            {	
-               
-               break;
-            }
-           case 56: 
-            {	
-               
-               break;
-            }
-           case 57: 
-            {	
-               
-               break;
-            }  
-           case 58: 
-            {	
-               
-               break;
-            }
-           case 59: 
-            {	
-               
                break;
             }
            case 60: // chanels is down
