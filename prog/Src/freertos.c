@@ -46,6 +46,34 @@ using namespace std;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define CH1 TIM2->CCR1 //CH1
+#define CH2 TIM2->CCR2 //CH2
+#define CH3 TIM4->CCR1 //CH3
+#define CH4 TIM4->CCR4 //CH4
+#define CH5 TIM4->CCR3 //CH5
+
+#define CH6 TIM3->CCR1 //CH6
+#define CH7 TIM3->CCR2 //CH7
+#define CH8 TIM3->CCR3 //CH8
+#define CH9 TIM3->CCR4 //CH9
+#define CH10 TIM15->CCR1 //CH10
+
+#define CH11 TIM15->CCR2 //CH11
+#define CH12 TIM16->CCR1 //CH12
+#define CH13 TIM17->CCR1 //CH13
+#define CH14 TIM1->CCR1 //CH14
+#define CH15 TIM1->CCR2 //CH15
+
+#define CH16 TIM1->CCR3 //CH16
+#define CH17 TIM2->CCR3 //CH17
+#define CH18 TIM2->CCR4 //CH18
+#define CH19 TIM4->CCR4 //CH19
+#define CH20 TIM8->CCR1 //CH20
+
+#define CH21 TIM8->CCR2 //CH21
+#define CH22 TIM8->CCR3 //CH22
+#define CH23 TIM8->CCR4 //CH23
+#define CH24 TIM1->CCR4 //CH24
 
 /* USER CODE END PD */
 
@@ -430,7 +458,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             }
            case 35: // start enable
             {	
-               uint16_t temp = data_for_hc595 & (1 << 31);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 31);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;
               
@@ -438,168 +466,168 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             }
            case 36: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 30);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 30);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }  
            case 37: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 29);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 29);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 38: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 28);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 28);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;             
                break;
             }
            case 39: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 27);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 27);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 40: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 26);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 26);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 41: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 25);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 25);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 42: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 24);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 24);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 43: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 23);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 23);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 44: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 22);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 22);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 45: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 21);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 21);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;            
                break;
             }
            case 46: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 20);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 20);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;             
                break;
             }  
            case 47: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 19);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 19);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 48: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 18);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 18);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 49: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 17);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 17);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 50: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 16);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 16);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;                
                break;
             }
            case 51: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 15);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 15);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 52: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 14);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 14);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 53: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 13);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 13);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 54: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 12);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 12);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 55: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 11);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 11);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 56: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 10);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 10);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;             
                break;
             }  
            case 57: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 9);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 9);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 58: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 8);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 8);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
             }
            case 59: 
             {	
-               uint16_t temp = data_for_hc595 & (1 << 7);
+               uint16_t temp = data_for_hc595 & (uint32_t)(1 << 7);
               *(pucRegBuffer) = (temp & 0xff00)>>8;
               *(pucRegBuffer+1) = temp & 0x00ff;              
                break;
@@ -921,7 +949,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 35: // start enable
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 31);
+                  data_for_hc595 |= (uint32_t)(1 << 31);
                }else{
                   data_for_hc595 &= ~(1 << 31);
                }
@@ -930,7 +958,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 36: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 30);
+                  data_for_hc595 |= (uint32_t)(1 << 30);
                }else{
                   data_for_hc595 &= ~(1 << 30);
                }               
@@ -939,7 +967,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 37: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 29);
+                  data_for_hc595 |= (uint32_t)(1 << 29);
                }else{
                   data_for_hc595 &= ~(1 << 29);
                }               
@@ -948,7 +976,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 38: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 28);
+                  data_for_hc595 |= (uint32_t)(1 << 28);
                }else{
                   data_for_hc595 &= ~(1 << 28);
                }               
@@ -957,7 +985,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 39: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 27);
+                  data_for_hc595 |= (uint32_t)(1 << 27);
                }else{
                   data_for_hc595 &= ~(1 << 27);
                }               
@@ -966,7 +994,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 40: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 26);
+                  data_for_hc595 |= (uint32_t)(1 << 26);
                }else{
                   data_for_hc595 &= ~(1 << 26);
                }               
@@ -975,7 +1003,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 41: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 25);
+                  data_for_hc595 |= (uint32_t)(1 << 25);
                }else{
                   data_for_hc595 &= ~(1 << 25);
                }               
@@ -984,7 +1012,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 42: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 24);
+                  data_for_hc595 |= (uint32_t)(1 << 24);
                }else{
                   data_for_hc595 &= ~(1 << 24);
                }               
@@ -993,7 +1021,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 43: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 23);
+                  data_for_hc595 |= (uint32_t)(1 << 23);
                }else{
                   data_for_hc595 &= ~(1 << 23);
                }               
@@ -1002,7 +1030,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 44: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 22);
+                  data_for_hc595 |= (uint32_t)(1 << 22);
                }else{
                   data_for_hc595 &= ~(1 << 22);
                }               
@@ -1011,7 +1039,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 45: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 21);
+                  data_for_hc595 |= (uint32_t)(1 << 21);
                }else{
                   data_for_hc595 &= ~(1 << 21);
                }               
@@ -1020,7 +1048,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 46: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 20);
+                  data_for_hc595 |= (uint32_t)(1 << 20);
                }else{
                   data_for_hc595 &= ~(1 << 20);
                }              
@@ -1029,7 +1057,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 47: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 19);
+                  data_for_hc595 |= (uint32_t)(1 << 19);
                }else{
                   data_for_hc595 &= ~(1 << 19);
                }               
@@ -1038,7 +1066,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 48: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 18);
+                  data_for_hc595 |= (uint32_t)(1 << 18);
                }else{
                   data_for_hc595 &= ~(1 << 18);
                }               
@@ -1047,7 +1075,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 49: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 17);
+                  data_for_hc595 |= (uint32_t)(1 << 17);
                }else{
                   data_for_hc595 &= ~(1 << 17);
                }               
@@ -1056,7 +1084,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 50: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 16);
+                  data_for_hc595 |= (uint32_t)(1 << 16);
                }else{
                   data_for_hc595 &= ~(1 << 16);
                }               
@@ -1065,7 +1093,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 51: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 15);
+                  data_for_hc595 |= (uint32_t)(1 << 15);
                }else{
                   data_for_hc595 &= ~(1 << 15);
                }               
@@ -1074,7 +1102,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 52: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 14);
+                  data_for_hc595 |= (uint32_t)(1 << 14);
                }else{
                   data_for_hc595 &= ~(1 << 14);
                }               
@@ -1083,7 +1111,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 53: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 13);
+                  data_for_hc595 |= (uint32_t)(1 << 13);
                }else{
                   data_for_hc595 &= ~(1 << 13);
                }               
@@ -1092,7 +1120,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 54: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 12);
+                  data_for_hc595 |= (uint32_t)(1 << 12);
                }else{
                   data_for_hc595 &= ~(1 << 12);
                }               
@@ -1101,7 +1129,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 55: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 11);
+                  data_for_hc595 |= (uint32_t)(1 << 11);
                }else{
                   data_for_hc595 &= ~(1 << 11);
                }               
@@ -1110,7 +1138,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 56: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 10);
+                  data_for_hc595 |= (uint32_t)(1 << 10);
                }else{
                   data_for_hc595 &= ~(1 << 10);
                }               
@@ -1119,7 +1147,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 57: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 9);
+                  data_for_hc595 |= (uint32_t)(1 << 9);
                }else{
                   data_for_hc595 &= ~(1 << 9);
                }               
@@ -1128,7 +1156,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 58: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 8);
+                  data_for_hc595 |= (uint32_t)(1 << 8);
                }else{
                   data_for_hc595 &= ~(1 << 8);
                }               
@@ -1137,7 +1165,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
            case 59: 
             {	
                if(!*(pucRegBuffer+1)){
-                  data_for_hc595 |= (1 << 7);
+                  data_for_hc595 |= (uint32_t)(1 << 7);
                }else{
                   data_for_hc595 &= ~(1 << 7);
                }               

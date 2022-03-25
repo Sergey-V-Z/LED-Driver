@@ -129,6 +129,37 @@ int main(void)
       settings.SlaveAddress = 0x0D;
       FlashP->Write(settings);
     } 
+  
+      HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //CH1
+      HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2); //CH2
+      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1); //CH3
+      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); //CH4
+      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3); //CH5
+            
+      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //CH6
+      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2); //CH7
+      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3); //CH8
+      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4); //CH9
+      HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1); //CH10
+      
+      HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_2); //CH11
+      HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1); //CH12
+      HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1); //CH13
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); //CH14
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2); //CH15
+      
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3); //CH16
+      HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); //CH17
+      HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4); //CH18
+      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); //CH19
+      HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1); //CH20
+      
+      HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_2); //CH21
+      HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3); //CH22
+      HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4); //CH23
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4); //CH24, CH25
+      //HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //CH25
+      
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
