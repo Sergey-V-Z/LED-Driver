@@ -775,7 +775,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
          {
            case 0: //  Stop/Start
             {	
-               
+
                break;
             }
            case 1: // Dir
@@ -821,9 +821,12 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                
                break;
             }
-           case 10: 
+           case 10: // start
             {	
-               
+               //double map(double x, double in_min, double in_max, double out_min, double out_max);
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
                break;
             }
            case 11: 

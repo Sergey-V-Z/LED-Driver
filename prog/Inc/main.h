@@ -59,7 +59,7 @@ typedef struct
 {
   uint32_t BaudRate;
   uint32_t  SlaveAddress;
-  Channel_t Channels[5];  
+  Channel_t Channels[25];  
    
 }settings_t;
 /* USER CODE END ET */
@@ -78,7 +78,7 @@ typedef struct
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+double map(double x, double in_min, double in_max, double out_min, double out_max);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
