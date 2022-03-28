@@ -44,6 +44,8 @@ typedef struct
   uint32_t EnableChannel;
   uint32_t DIMChannel;
   uint32_t CurrentChannel;
+  uint32_t minPWM;
+  uint32_t maxPWM;
   
 }Channel_t;  
 //******************

@@ -28,6 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "mb.h"
 #include "mbport.h"
+#include "flash_spi.h"
 
 using namespace std;
 
@@ -90,6 +91,7 @@ extern ADC_HandleTypeDef hadc4;
 extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi3;
 extern settings_t settings;
+extern flash *FlashP;
 int start = 1;
 
 uint16_t dim_chanels[25] = {0,};
@@ -260,23 +262,6 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
    if(usAddress == 0 ){}
    else{usAddress--;} 
    
-   //   // dim_chanels range
-   //   if((usAddress >= addr_dim_chanels) && (usAddress < addr_enable_chanels)){
-   //      for(int i = addr_dim_chanels - start_addr; i < usNRegs; ++i)
-   //      {
-   //        dim_chanels[]
-   //      }
-   //
-   //   }
-   //   // addr_enable_chanels range
-   //   else if((usAddress >= addr_enable_chanels) && (usAddress < addr_chanels_is_down)){
-   //      
-   //   }
-   //   //addr_chanels_is_down range
-   //   else if((usAddress >= addr_chanels_is_down) && (usAddress < end_r) && (eMode == MB_REG_READ)){
-   //      
-   //   }
-   
    switch (eMode)
    {
      case MB_REG_READ:
@@ -333,127 +318,177 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             }
            case 10: // start dim
             {	
-               
+              uint16_t temp = CH1;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 11: 
             {	
-               
+              uint16_t temp = CH2;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 12: 
             {	
-               
+              uint16_t temp = CH3;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 13: 
             {	
-               
+              uint16_t temp = CH4;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 14: 
             {	
-               
+              uint16_t temp = CH5;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 15: 
             {	
-               
+              uint16_t temp = CH6;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 16: 
             {	
-               
+              uint16_t temp = CH7;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 17: 
             {	
-               
+              uint16_t temp = CH8;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 18: 
             {	
-               
+              uint16_t temp = CH9;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 19: 
             {	
-               
+              uint16_t temp = CH10;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 20: 
             {	
-               
+              uint16_t temp = CH11;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 21: 
             {	
-               
+              uint16_t temp = CH12;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 22: 
             {	
-               
+              uint16_t temp = CH13;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 23: 
             {	
-               
+              uint16_t temp = CH14;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 24: 
             {	
-               
+              uint16_t temp = CH15;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 25: 
             {	
-               
+              uint16_t temp = CH16;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 26: 
             {	
-               
+              uint16_t temp = CH17;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 27: 
             {	
-               
+              uint16_t temp = CH18;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 28: 
             {	
-               
+              uint16_t temp = CH19;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             } 
            case 29: 
             {	
-               
+              uint16_t temp = CH20;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 30: 
             {	
-               
+              uint16_t temp = CH21;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 31: 
             {	
-               
+              uint16_t temp = CH22;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 32: 
             {	
-               
+              uint16_t temp = CH23;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 33: 
             {	
-               
+              uint16_t temp = CH24;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;               
                break;
             }
            case 34: // end dim
-            {	
-               
+            {
+              uint16_t temp = CH24;
+              *(pucRegBuffer) = (temp & 0xff00)>>8;
+              *(pucRegBuffer+1) = temp & 0x00ff;
                break;
             }
            case 35: // start enable
@@ -811,9 +846,9 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             {	
                break;
             }
-           case 8: 
+           case 8: // save
             {	
-               
+               FlashP->Write(settings);
                break;
             }
            case 9: 
@@ -821,132 +856,281 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
                
                break;
             }
-           case 10: // start
-            {	
-               //double map(double x, double in_min, double in_max, double out_min, double out_max);
+           case 10: // start PWM
+            {
                uint16_t temp = 0;
                temp = temp | (*(pucRegBuffer) << 8);
                temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH1 = temp;
+                settings.Channels[0].DIMChannel = temp;
+               }
                break;
             }
            case 11: 
             {	
-               
+                uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH2 = temp;
+                settings.Channels[1].DIMChannel = temp;
+               }              
                break;
             }
            case 12: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH3 = temp;
+                settings.Channels[2].DIMChannel = temp;
+               }               
                break;
             }
            case 13: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH4 = temp;
+                settings.Channels[3].DIMChannel = temp;
+               }               
                break;
             }
            case 14: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH5 = temp;
+                settings.Channels[4].DIMChannel = temp;
+               }               
                break;
             }
            case 15: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH6 = temp;
+                settings.Channels[5].DIMChannel = temp;
+               }               
                break;
             }
            case 16: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH7 = temp;
+                settings.Channels[6].DIMChannel = temp;
+               }               
                break;
             }
            case 17: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH8 = temp;
+                settings.Channels[7].DIMChannel = temp;
+               }               
                break;
             }
            case 18: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH9 = temp;
+                settings.Channels[8].DIMChannel = temp;
+               }               
                break;
             }
            case 19: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH10 = temp;
+                settings.Channels[9].DIMChannel = temp;
+               }               
                break;
             }
            case 20: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH11 = temp;
+                settings.Channels[10].DIMChannel = temp;
+               }               
                break;
             }
            case 21: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH12 = temp;
+                settings.Channels[11].DIMChannel = temp;
+               }               
                break;
             }
            case 22: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH13 = temp;
+                settings.Channels[12].DIMChannel = temp;
+               }               
                break;
             }
            case 23: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH14 = temp;
+                settings.Channels[13].DIMChannel = temp;
+               }               
                break;
             }
            case 24: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH15 = temp;
+                settings.Channels[14].DIMChannel = temp;
+               }               
                break;
             }
            case 25: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH16 = temp;
+                settings.Channels[15].DIMChannel = temp;
+               }               
                break;
             }
            case 26: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH17 = temp;
+                settings.Channels[16].DIMChannel = temp;
+               }               
                break;
             }
            case 27: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH18 = temp;
+                settings.Channels[17].DIMChannel = temp;
+               }               
                break;
             }
            case 28: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH19 = temp;
+                settings.Channels[18].DIMChannel = temp;
+               }               
                break;
             } 
            case 29: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH20 = temp;
+                settings.Channels[19].DIMChannel = temp;
+               }               
                break;
             }
            case 30: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH21 = temp;
+                settings.Channels[20].DIMChannel = temp;
+               }               
                break;
             }
            case 31: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH22 = temp;
+                settings.Channels[21].DIMChannel = temp;
+               }               
                break;
             }
            case 32: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH23 = temp;
+                settings.Channels[22].DIMChannel = temp;
+               }               
                break;
             }
            case 33: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH24 = temp;
+                settings.Channels[23].DIMChannel = temp;
+                settings.Channels[24].DIMChannel = temp;
+               }               
                break;
             }
            case 34: 
             {	
-               
+               uint16_t temp = 0;
+               temp = temp | (*(pucRegBuffer) << 8);
+               temp = temp | *(pucRegBuffer+1);
+               if((temp > 0) && (temp <= 1000)){
+                CH24 = temp;
+                settings.Channels[23].DIMChannel = temp;
+                settings.Channels[24].DIMChannel = temp;  
+               }
                break;
             }        
            case 35: // start enable
