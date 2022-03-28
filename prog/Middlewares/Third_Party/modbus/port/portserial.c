@@ -62,7 +62,7 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 BOOL
 xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity )
 {
-    /**
+   /**
      * set 485 mode receive and transmit control IO
      * @note MODBUS_SLAVE_RT_CONTROL_PIN_INDEX need be defined by user
      */
@@ -72,28 +72,40 @@ xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
     serial->Init.StopBits = UART_STOPBITS_1;
   
     switch(eParity){
-    case MB_PAR_NONE: {
-        serial->Init.WordLength = UART_WORDLENGTH_8B;
-        serial->Init.Parity = UART_PARITY_NONE;
-        break;
+      case MB_PAR_NONE: {
+          serial->Init.WordLength = UART_WORDLENGTH_8B;
+          serial->Init.Parity = UART_PARITY_NONE;
+          break;
+      }
+      case MB_PAR_ODD: {
+          serial->Init.WordLength = UART_WORDLENGTH_9B;
+          serial->Init.Parity = UART_PARITY_ODD;
+          break;
+      }
+      case MB_PAR_EVEN: {
+          serial->Init.WordLength = UART_WORDLENGTH_9B;
+          serial->Init.Parity = UART_PARITY_EVEN;
+          break;
+      }
     }
-    case MB_PAR_ODD: {
-        serial->Init.WordLength = UART_WORDLENGTH_9B;
-        serial->Init.Parity = UART_PARITY_ODD;
-        break;
-    }
-    case MB_PAR_EVEN: {
-        serial->Init.WordLength = UART_WORDLENGTH_9B;
-        serial->Init.Parity = UART_PARITY_EVEN;
-        break;
-    }
-    }
-    /* set serial configure */
-    if (HAL_UART_Init(serial) != HAL_OK)
+
+    serial->Init.Mode = UART_MODE_TX_RX;
+    serial->Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    serial->Init.OverSampling = UART_OVERSAMPLING_16;
+    serial->Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+    serial->AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+    
+    HAL_UART_DeInit(serial);
+    
+    if (HAL_RS485Ex_Init(serial, UART_DE_POLARITY_HIGH, 0, 0) != HAL_OK)
     {
       Error_Handler();
     }
-    
+    /* set serial configure */
+    //if (HAL_UART_Init(serial) != HAL_OK)
+    //{
+     // Error_Handler();
+   // }    
     return TRUE;
 }
  
