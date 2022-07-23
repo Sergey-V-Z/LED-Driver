@@ -190,6 +190,32 @@ void StartDefaultTask(void const * argument)
    HAL_GPIO_WritePin(MR_GPIO_Port, MR_Pin, GPIO_PIN_SET);
    HAL_GPIO_WritePin(OE_GPIO_Port, OE_Pin, GPIO_PIN_RESET);
    
+   CH1 = settings.Channels[0].DIMChannel;
+   CH2 = settings.Channels[1].DIMChannel;
+   CH3 = settings.Channels[2].DIMChannel;
+   CH4 = settings.Channels[3].DIMChannel;
+   CH5 = settings.Channels[4].DIMChannel;
+   CH6 = settings.Channels[5].DIMChannel;
+   CH7 = settings.Channels[6].DIMChannel;
+   CH8 = settings.Channels[7].DIMChannel;
+   CH9 = settings.Channels[8].DIMChannel;
+   CH10 = settings.Channels[9].DIMChannel;
+   CH11 = settings.Channels[10].DIMChannel;
+   CH12 = settings.Channels[11].DIMChannel;
+   CH13 = settings.Channels[12].DIMChannel;
+   CH14 = settings.Channels[13].DIMChannel;
+   CH15 = settings.Channels[14].DIMChannel;
+   CH16 = settings.Channels[15].DIMChannel;
+   CH17 = settings.Channels[16].DIMChannel;
+   CH18 = settings.Channels[17].DIMChannel;
+   CH19 = settings.Channels[18].DIMChannel;
+   CH20 = settings.Channels[19].DIMChannel;
+   CH21 = settings.Channels[20].DIMChannel;
+   CH22 = settings.Channels[21].DIMChannel;
+   CH23 = settings.Channels[22].DIMChannel;
+   CH24 = settings.Channels[23].DIMChannel;
+
+   
    // for adc
    HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&CH1_CH10,10);
    HAL_ADC_Start_DMA(&hadc2,(uint32_t*)&CH11_CH12,2);
